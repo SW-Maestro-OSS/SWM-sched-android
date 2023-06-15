@@ -14,12 +14,17 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 dependencies {
     implementation(project(":common-ui"))
 
     implementation(libs.bundles.androidx.ui.foundation)
+    implementation(libs.material)
     implementation(libs.constraintlayout)
     implementation(libs.hilt)
     kapt(libs.hilt.kapt)

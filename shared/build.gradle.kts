@@ -17,4 +17,7 @@ android {
     }
 }
 
-dependencies {}
+dependencies {
+    implementation(libs.bundles.androidx.ui.foundation)
+    implementation(libs.material)
+}
