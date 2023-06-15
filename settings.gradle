@@ -16,3 +16,4 @@ rootProject.name = "SWM-sched-android"
 include ':app'
 include ':domain'
 include ':data'
+include ':feature:home'
