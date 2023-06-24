@@ -1,6 +1,7 @@
 plugins {
     kotlin("android")
     id("com.android.library")
+    id("dagger.hilt.android.plugin")
     kotlin("kapt")
 }
 android {
@@ -23,6 +24,7 @@ android {
 dependencies {
     implementation(project(":common-ui"))
 
+    implementation("androidx.activity:activity-ktx:1.7.2")
     implementation(libs.bundles.androidx.ui.foundation)
     implementation(libs.material)
     implementation(libs.constraintlayout)
