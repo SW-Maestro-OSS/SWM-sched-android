@@ -9,9 +9,8 @@ import okhttp3.ConnectionPool
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.soma.conference.android.data.CommonViewTypeDeserializer
-import org.soma.conference.android.data.dto.BaseResponseDTO
 import org.soma.conference.android.data.service.ViewTypeService
-import org.soma.conference.domain.viewtype.CommonViewVO
+import org.soma.conference.domain.viewtype.CommonListItemVO
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
@@ -47,7 +46,7 @@ abstract class NetworkModule {
             client: OkHttpClient
         ): Retrofit {
             val gson = GsonBuilder()
-                .registerTypeAdapter(CommonViewVO::class.java, CommonViewTypeDeserializer())
+                .registerTypeAdapter(CommonListItemVO::class.java, CommonViewTypeDeserializer())
                 .create()
 
             return Retrofit.Builder()

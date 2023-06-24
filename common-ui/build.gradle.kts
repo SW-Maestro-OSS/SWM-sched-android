@@ -29,4 +29,5 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.material)
     implementation(libs.bundles.basic.test)
+    implementation("com.github.bumptech.glide:glide:4.15.1")
 }

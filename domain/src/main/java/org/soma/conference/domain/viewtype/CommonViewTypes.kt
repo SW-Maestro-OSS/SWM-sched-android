@@ -17,5 +17,14 @@ enum class CommonViewTypes(
             }
             throw IllegalStateException("Can't find viewType. Please check CommonViewTypes for the ViewType you want to use.")
         }
+
+        fun findOrdinalFromViewType(viewType: String): Int {
+            for (enumValue in CommonViewTypes.values()) {
+                if (enumValue.viewType == viewType) {
+                    return enumValue.ordinal
+                }
+            }
+            throw IllegalStateException("Can't find viewType ordinal. Please check CommonViewTypes for the ViewType you want to use.")
+        }
     }
 }
